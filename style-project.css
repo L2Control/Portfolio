@@ -1,0 +1,29 @@
+/*---- Projects.html ----*/
+body {
+  background-color: lightgrey;
+  overflow: auto;
+}
+main {
+  margin: 0 5vw;
+  background-color: #695e78;
+  min-height: 84.8vh;
+}
+.project-img {
+  width: 100%;
+  min-height: 500px;
+  transform: scale(1.1);
+}
+.project-img:hover {
+  transform: scale(1.2);
+}
+.grid-item {
+  background-color: #695e78;
+  padding: 0;
+}
+
+@media screen and (min-width: 791px) {
+  main {
+    margin-top: 48px;
+  }
+}
+/*----------------------------------*/

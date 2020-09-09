@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hannes Levéque Portfolio</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="/pictures/logo-mini.ico"
+    />
+    <link rel="stylesheet" href="/style.css" type="text/css" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="sticky">
+      <nav class="navmeny" id="navmeny">
+        <a href="#home"
+          ><img class="nav-logo" src="/pictures/logo.png" alt="Hannes Levéque"
+        /></a>
+        <div class="empty"></div>
+        <a class="a-nav" href="#home" tabindex="2">Home</a>
+
+        <a class="a-nav" href="#about" tabindex="3">About</a>
+
+        <a class="a-nav" href="#projects" tabindex="4">Projects</a>
+
+        <a class="a-nav" href="#contact" tabindex="5">Contact</a>
+
+        <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
+    </header>
+    <aside class="aside-logo" id="home">
+      <img
+        class="home-logo"
+        src="/pictures/hannes.JPG"
+        alt="A picture of Hannes Levéque"
+      />
+    </aside>
+    <section class="about" id="about" tabindex="6">
+      <h1>About <span class="title-main-color">Me</span></h1>
+      <p class="about">
+        My name is Hannes Levéque and born in Malmö, Sweden. I'm a 19 year old
+        programmer, who has always been interested in computers since very
+        little.
+      </p>
+      <p class="about">
+        I have knowledge and experience in HTML/CSS, PHP/MySQL and Python
+      </p>
+      <p class="about">
+        I've graduated a 3 year-long techincal education at <br />
+        upper-secondary school and currently studying a optional 4th year for
+        further preparation for working life. <br />
+        <br />
+        You can find the relevant courses I've studied down below
+      </p>
+      <section class="courses">
+        <h2 class="h2-about">Courses</h2>
+        <p class="about">
+          Web development 1 <br />
+          Programming 1 & 2 <br />
+          Computer and Network 1<br />
+        </p>
+      </section>
+
+      <button
+        onclick="window.location.href='#contact';"
+        class="btn-contact button"
+        tabindex="6"
+      >
+        <span>Contact Me</span>
+      </button>
+    </section>
+    <section class="projects" id="projects" tabindex="8">
+      <h1 class="projects">
+        My <span class="title-main-color">Projects</span>
+      </h1>
+      <p class="projects">
+        Here's a showcase of a few projects I've done. <br />
+        Click on one of the pictures to see the project or click the button
+        further below to view my complete portfolio
+      </p>
+      <div class="grid">
+        <div class="grid-item" id="grid-div">
+          <a href="/projects/">
+            <div class="">
+              <div class=""></div>
+              <img
+                class="project-img"
+                id="project-img"
+                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt=""
+              />
+            </div>
+          </a>
+        </div>
+        <div class="grid-item" id="grid-div2">
+          <a href="/projects/">
+            <div class="grid-div">
+              <div class=""></div>
+              <img
+                class="project-img"
+                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+                alt=""
+              />
+            </div>
+          </a>
+        </div>
+      </div>
+      <button
+        onclick="window.location.href='/projects.html';"
+        class="btn-project button"
+        tabindex="8"
+      >
+        <span style="font-size: 20px;">View All Projects</span>
+      </button>
+    </section>
+    <section class="contact" id="contact" tabindex="9">
+      <h1 class="h1-contact">Contact <span class="p-white">Me</span></h1>
+      <p class="contact">
+        Are you interested in me and my work, or do you have any questions?<br />
+        Here are my contact details to get in touch with me and I'll try to
+        respond as quickly as I can.
+      </p>
+    </section>
+    <footer>
+      <div class="footer-flex">
+        <a href="mailto:pannes.pannes@gmail.com">
+          <p class="p-footer a-white">pannes.pannes@gmail.com</p>
+        </a>
+        <a href="mailto:pannes.pannes@gmail.com">
+          <img
+            src="/pictures/mail-logo.png"
+            alt="Mail icon"
+            class="footer-img footer-imgh"
+          />
+        </a>
+      </div>
+      <div class="footer-flex">
+        <p class="p-footer">
+          L2 Control#4892
+        </p>
+
+        <img
+          src="/pictures/discord-logo.png"
+          alt="Discord logo"
+          class="footer-img"
+        />
+      </div>
+      <div class="footer-flex">
+        <a href="https://github.com/l2control" target="_blank">
+          <p class="p-footer a-white">L2 Control</p>
+        </a>
+        <a href="https://github.com/l2control" target="_blank">
+          <img
+            src="/pictures/Github-logo.png"
+            alt="Github logo"
+            class="footer-img footer-imgh"
+          />
+        </a>
+      </div>
+    </footer>
+    <!-- Smooth Scrolling -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      //Get height of pic
+      function height_script() {
+        var img = document.getElementById("project-img");
+        var imgheight = img.offsetHeight;
+        document.getElementById("grid-div").style.height =
+          imgheight.toString() + "px";
+        document.getElementById("grid-div2").style.height =
+          imgheight.toString() + "px";
+      }
+      // Hamburgar menyn
+      function menuFunction() {
+        var x = document.getElementById("navmeny");
+
+        if (x.className === "navmeny") {
+          x.className += " responsive";
+        } else {
+          x.className = "navmeny";
+        }
+        var y = document.getElementById("a-nav");
+        if (x.className === "a-nav") {
+        }
+      }
+
+      $(document).ready(function () {
+        height_script();
+        // Add smooth scrolling to all links
+        $("a").on("click", function (event) {
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+              }
+            );
+          } // End if
+        });
+      });
+
+      $(window).resize(function () {
+        height_script();
+      });
+    </script>
+  </body>
+</html>
