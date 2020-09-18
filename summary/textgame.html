@@ -8,11 +8,12 @@
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="pictures/logo-mini.ico"
+      href="/pictures/logo-mini.ico"
     />
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="/style.css" type="text/css" />
 
-    <link rel="stylesheet" href="style-project.css" type="text/css" />
+    <link rel="stylesheet" href="/style-project.css" type="text/css" />
+    <link rel="stylesheet" href="/style-summary.css" type="text/css" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato" />
     <link
       rel="stylesheet"
@@ -22,24 +23,40 @@
   <body>
     <header class="sticky">
       <nav class="navmeny" id="navmeny">
-        <a href="index.html"
-          ><img class="nav-logo" src="pictures/logo.png" alt="Hannes Levéque"
+        <a href="/index.html"
+          ><img class="nav-logo" src="/pictures/logo.png" alt="Hannes Levéque"
         /></a>
         <div class="empty"></div>
-        <a class="a-nav" href="index.html" tabindex="2">Home</a>
+        <a class="a-nav" href="/index.html" tabindex="2">Home</a>
 
-        <a class="a-nav" href="index.html" tabindex="3">About</a>
+        <a class="a-nav" href="/index.html" tabindex="3">About</a>
 
-        <a class="a-nav" href="index.html" tabindex="4">Projects</a>
+        <a class="a-nav" href="/index.html" tabindex="4">Projects</a>
 
-        <a class="a-nav" href="index.html" tabindex="5">Contact</a>
+        <a class="a-nav" href="/index.html" tabindex="5">Contact</a>
 
         <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
           <i class="fa fa-bars"></i>
         </a>
       </nav>
     </header>
-    <main class="grid"></main>
+    <main>
+        <article>
+        <h1 class="summary">Save <span class="p-white">Erica</span></h1>
+        <p>
+            This is a game about your bestfriend Erica. You have a completely ordinary conversation until someone knocks on the door...<br>
+            Erica doesn't know how to react and asks for your advice. What will you tell her to do? <br>
+            Every choice of yours will have an impact on how things will end for Erica.
+        </p>
+        <p>
+            This game is an interactive game with over 50 different situations and multiple endings, which means that anything could happen...<br>
+            The game is fully played out as a SMS-conversation between you and your friend, Erica, with you being able to choose different reponses.<br>
+            It's created in HTML, CSS, JS, AJAX and jQuery.
+
+        </p>
+        <img src="/textgame-cut.png" alt="">
+        </article>
+    </main>
     <footer>
       <div class="footer-flex">
         <a href="mailto:pannes.pannes@gmail.com">
@@ -47,7 +64,7 @@
         </a>
         <a href="mailto:pannes.pannes@gmail.com">
           <img
-            src="pictures/mail-logo.png"
+            src="/pictures/mail-logo.png"
             alt="Mail icon"
             class="footer-img footer-imgh"
           />
@@ -57,7 +74,7 @@
         <p class="p-footer">L2 Control#4892</p>
 
         <img
-          src="pictures/discord-logo.png"
+          src="/pictures/discord-logo.png"
           alt="Discord logo"
           class="footer-img"
         />
@@ -68,7 +85,7 @@
         </a>
         <a href="https://github.com/l2control" target="_blank">
           <img
-            src="pictures/Github-logo.png"
+            src="/pictures/Github-logo.png"
             alt="Github logo"
             class="footer-img footer-imgh"
           />
@@ -118,29 +135,6 @@
           } // End if
         });
       });
-
-      var folder = "projects/";
-      var summary = "";
-      $.ajax({
-        url: folder,
-        success: function (data) {
-          $(data)
-            .find("a")
-            .attr("href", function (i, val) {
-              if (val.match(/\.(jpe?g|png|gif)$/)) {
-                summary = val.replace('/projects/', '');
-                summary = summary.replace('png', 'html');
-                summary = summary.replace('jpeg', 'html');
-                summary = summary.replace('jpg', 'html');
-                $("main").append(
-                  "<section class='grid-item'><a href='summary/" + summary + "'><div class='grid-div'><div class='grid-div'></div><img class='project-img' src='" +
-                    val +
-                    "' alt='Project'/></div></a></section>"
-                );
-              }
-            });
-        },
-      });
     </script>
-  </body>
+</body>
 </html>
