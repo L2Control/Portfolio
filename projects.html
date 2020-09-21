@@ -119,7 +119,7 @@
         });
       });
 
-      var folder = "projects/";
+      var folder = "project-img/";
       var summary = "";
       $.ajax({
         url: folder,
@@ -128,12 +128,14 @@
             .find("a")
             .attr("href", function (i, val) {
               if (val.match(/\.(jpe?g|png|gif)$/)) {
-                summary = val.replace('/projects/', '');
-                summary = summary.replace('png', 'html');
-                summary = summary.replace('jpeg', 'html');
-                summary = summary.replace('jpg', 'html');
+                summary = val.replace("/projects/", "");
+                summary = summary.replace("png", "html");
+                summary = summary.replace("jpeg", "html");
+                summary = summary.replace("jpg", "html");
                 $("main").append(
-                  "<section class='grid-item'><a href='summary/" + summary + "'><div class='grid-div'><div class='grid-div'></div><img class='project-img' src='" +
+                  "<section class='grid-item'><a href='summary/" +
+                    summary +
+                    "'><div class='grid-div'><div class='grid-div'></div><img class='project-img' src='" +
                     val +
                     "' alt='Project'/></div></a></section>"
                 );
