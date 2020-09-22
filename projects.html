@@ -128,12 +128,12 @@
             .find("a")
             .attr("href", function (i, val) {
               if (val.match(/\.(jpe?g|png|gif)$/)) {
-                summary = val.replace("/projects/", "");
+                summary = val.replace("project-img/", "summary/");
                 summary = summary.replace("png", "html");
                 summary = summary.replace("jpeg", "html");
                 summary = summary.replace("jpg", "html");
                 $("main").append(
-                  "<section class='grid-item'><a href='summary/" +
+                  "<section class='grid-item'><a href='" +
                     summary +
                     "'><div class='grid-div'><div class='grid-div'></div><img class='project-img' src='" +
                     val +
