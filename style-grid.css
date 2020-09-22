@@ -1,0 +1,42 @@
+@media screen and (max-width: 600px) {
+  body {
+    margin: 0;
+  }
+  .home-logo {
+    height: 250px;
+  }
+  .aside-logo {
+    height: 250px;
+  }
+  .nav-logo {
+    margin-left: 0;
+  }
+  .icon {
+    margin: 0;
+  }
+  p.about,
+  p.contact,
+  p.projects,
+  h1.projects {
+    width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .grid-item {
+    max-width: 100vw;
+  }
+  footer {
+    display: block;
+  }
+  .footer-flex {
+    justify-content: space-between;
+    height: 60px;
+  }
+  .p-footer {
+    padding: 0;
+    margin-left: 20px;
+  }
+  .footer-img {
+    margin: 0 10px 0 0;
+  }
+}

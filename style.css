@@ -325,9 +325,6 @@ footer {
     width: 40px;
     height: 40px;
   }
-  .footer-flex:last-child {
-    margin-right: 0;
-  }
 }
 @media screen and (max-width: 750px) {
   .p-footer {
