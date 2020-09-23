@@ -39,4 +39,10 @@
   .footer-img {
     margin: 0 10px 0 0;
   }
+  .summary-img{
+    max-width: 100%;
+  }
+  p.summary{
+    font-size: 12px;
+}
 }
