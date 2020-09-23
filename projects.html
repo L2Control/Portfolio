@@ -117,29 +117,43 @@
             );
           } // End if
         });
-        var folder = "project-img/";
-        var summary = "";
+        // var folder = "project-img/";
+        // var summary = "";
+        
+        // $.ajax({
+        //   url: folder,
+        //   success: function (data) {
+        //     $(data)
+        //       .find("a")
+        //       .attr("href", function (i, val) {
+        //         if (val.match(/\.(jpe?g|png|gif)$/)) {
+        //           summary = val.replace("project-img/", "summary/");
+        //           summary = summary.replace("png", "html");
+        //           summary = summary.replace("jpeg", "html");
+        //           summary = summary.replace("jpg", "html");
+        //           $("main").append(
+        //             "<section class='grid-item'><a href='" +
+        //               summary +
+        //               "'><div class='grid-div'><div class='grid-div'></div><img class='project-img' src='" +
+        //               val +
+        //               "' alt='Project'/></div></a></section>"
+        //           );
+        //         }
+        //       });
+        //   },
+        // });
+        var dir = "project-img/";
+        var fileextension = ".png";
         $.ajax({
-          url: folder,
-          success: function (data) {
-            $(data)
-              .find("a")
-              .attr("href", function (i, val) {
-                if (val.match(/\.(jpe?g|png|gif)$/)) {
-                  summary = val.replace("project-img/", "summary/");
-                  summary = summary.replace("png", "html");
-                  summary = summary.replace("jpeg", "html");
-                  summary = summary.replace("jpg", "html");
-                  $("main").append(
-                    "<section class='grid-item'><a href='" +
-                      summary +
-                      "'><div class='grid-div'><div class='grid-div'></div><img class='project-img' src='" +
-                      val +
-                      "' alt='Project'/></div></a></section>"
-                  );
-                }
-              });
-          },
+            //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+            url: dir,
+            success: function (data) {
+                //List all .png file names in the page
+                $(data).find("a:contains(" + fileextension + ")").each(function () {
+                    var filename = this.href.replace(window.location.host, "").replace("http://", "").replace(dir, "");
+                    $("main").append("<img src='" + dir + filename + "'>");
+                });
+            }
         });
       });
 
