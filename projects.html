@@ -39,7 +39,8 @@
         </a>
       </nav>
     </header>
-    <main class="grid"></main>
+    <main class="grid">
+    </main>
     <footer>
       <div class="footer-flex">
         <a href="mailto:pannes.pannes@gmail.com">
@@ -117,6 +118,8 @@
             );
           } // End if
         });
+        
+        // Funkar EJ på githubs livepage. Ingen aning varför
         // var folder = "project-img/";
         // var summary = "";
         
@@ -134,7 +137,7 @@
         //           $("main").append(
         //             "<section class='grid-item'><a href='" +
         //               summary +
-        //               "'><div class='grid-div'><div class='grid-div'></div><img class='project-img' src='" +
+        //               "'><div class='grid-div'><img class='project-img' src='" +
         //               val +
         //               "' alt='Project'/></div></a></section>"
         //           );
@@ -142,19 +145,7 @@
         //       });
         //   },
         // });
-        var dir = "project-img/";
-        var fileextension = ".png";
-        $.ajax({
-            //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-            url: dir,
-            success: function (data) {
-                //List all .png file names in the page
-                $(data).find("a:contains(" + fileextension + ")").each(function () {
-                    var filename = this.href.replace(window.location.host, "").replace("http://", "").replace("/p", "p");
-                    $("main").append("<img src='" + filename + "'>");
-                });
-            }
-        });
+
       });
 
       
