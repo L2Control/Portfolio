@@ -132,6 +132,7 @@ p {
   padding: 10px;
   max-width: 224px;
   border-radius: 15px;
+  min-height: 20px;
 }
 
 .me + .erica {
@@ -194,7 +195,21 @@ p {
 }
 
 /*Pick options*/
-
+.mobile-btn{
+  font-family: "Lato", sans-serif;
+  height: 40px;
+  margin-top: 25px;
+  position: absolute;
+  right: 0;
+  width: 90px;
+  z-index: 3;
+  bottom: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  background-color: #adb4be;
+  border-radius: 10%;
+}
 .option-picker {
   width: 100%;
   border-top: 2px solid black;

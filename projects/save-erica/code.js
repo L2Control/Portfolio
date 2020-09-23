@@ -2,6 +2,7 @@ $(document).ready(function () {
   $.ajax({
     url: "text/prolog.txt",
     success: function (data) {
+      mobileOB();
       sentMsg(data);
     },
   });
@@ -15,6 +16,52 @@ $(document).ready(function () {
     valClick(this);
   });
 });
+
+function mobileOB(){
+  if(window.screen.width < 500){
+    let x = document.createElement("IMG");
+    x.setAttribute("src", "keyboard.jpg");
+    x.setAttribute("class", "keyboard");
+    x.setAttribute("alt", "iPhone Keyboard");
+    x.setAttribute("style", "display: none;")
+    let b = document.createElement("button");
+    b.setAttribute("onclick", "mobileVal()")
+    b.setAttribute("class", "mobile-btn");
+    b.setAttribute("style", "display: none;")
+    let btn_t = document.createTextNode("retur");
+    b.appendChild(btn_t);
+    document.querySelector(".border").appendChild(b);
+    document.querySelector(".border").appendChild(x);
+    
+    return true;
+  }
+  return false;
+}
+
+function mobileVal(){
+  let optionpicker = document.querySelector(".option-picker");
+  let selected = optionpicker.options[optionpicker.selectedIndex];
+  let urlText  = selected.value;
+  let chosenMsg = selected.innerText;
+  sendChosen(chosenMsg);
+  $.ajax({
+    url: "text/" + urlText + ".txt",
+    success: function (data) {
+      //skickar ut de nya smsen från textfilen
+      sentMsg(data);
+
+      //kollar vilka de nya valen är beroende på föregående val
+      playerChoice(urlText);
+
+      //tar bort gamla checkpoint
+      removeCheckPoint();
+
+      //Tar "selected" tillbaka till default (inget)
+      $(".option-picker").val($(".option-picker").data("default-value"));
+    },
+  });
+  
+}
 
 function sendChosen(str) {
   str = `<p class="me chatAni">${str}</p>`;
@@ -38,13 +85,13 @@ function sentMsg(str) {
       clearInterval(timer);
     }
     i++;
-  }, 2000);
+  }, 200);
 }
 
 function scrollBot() {
   $(".iphone-chat").animate(
     { scrollTop: $(".iphone-chat").prop("scrollHeight") },
-    1500
+    150
   );
 }
 //Realtid
@@ -113,6 +160,10 @@ function addOB() {
   optionPick.style.display = "block";
   chatbox.style.height = "73%";
   scrollBot();
+  if(mobileOB){
+    document.querySelector(".keyboard").style.display = "block";
+    document.querySelector(".mobile-btn").style.display = "block";
+  }
 }
 
 //Tar bort valen
@@ -121,6 +172,10 @@ function removeOB() {
   var chatbox = document.querySelector(".iphone-chat");
   optionPick.style.display = "none";
   chatbox.style.height = "97%";
+  if(mobileOB){
+    document.querySelector(".keyboard").style.display = "none";
+    document.querySelector(".mobile-btn").style.display = "none";
+  }
 }
 
 //Tar bort checkpoint

@@ -9,7 +9,5 @@
 <p class="chat-time chatAni center-later-me">2 minuter senare</p>
 <p class="erica chatAni">Inget kan rädda Erica nu!</p>
 <p class="erica chatAni">HAHAHAHAHAH</p>
-<p class="erica chatAni">DU</p>
-<p class="erica chatAni">ÄR</p>
-<p class="erica chatAni">NÄSTA!</p>
+<p class="erica chatAni">DU ÄR NÄSTA</p>
 <p class="erica chatAni" id=bEnd>HAHAHAHAHAHA!!</p>

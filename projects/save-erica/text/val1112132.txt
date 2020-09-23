@@ -12,7 +12,5 @@
 <p class="me chatAni">Erica???</p>
 <p class="me chatAni">Vad menar du??</p>
 <p class="erica chatAni">HAHAHAHAHAH</p>
-<p class="erica chatAni">DU</p>
-<p class="erica chatAni">ÄR</p>
-<p class="erica chatAni">NÄSTA</p>
-<p class="erica chatAni" id=end>HAHAHAHAHAHA!!</p>
+<p class="erica chatAni">DU ÄR NÄSTA</p>
+<p class="erica chatAni" id=bEnd>HAHAHAHAHAHA!!</p>

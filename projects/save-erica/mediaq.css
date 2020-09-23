@@ -46,6 +46,13 @@
   .option-picker {
     position: absolute;
     top: 76%;
+    z-index: 2;
+  }
+  .keyboard{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
   }
 
   .me {
@@ -70,6 +77,13 @@
   .center-later-erica {
     margin-left: 130px;
   }
+  .keyboard{
+    height: 115px;
+  }
+  .mobile-btn{
+    width: 80px;
+    height: 27px;
+  }
 }
 /*iPhone 6/7/8*/
 @media screen and (max-width: 380px) and (min-width: 351px) and (max-height: 700px) {
@@ -84,6 +98,13 @@
   }
   #langtid {
     margin-left: 85px;
+  }
+  .keyboard{
+    height: 140px;
+  }
+  .mobile-btn{
+    width: 90px;
+    height: 32px;
   }
 }
 
@@ -107,6 +128,13 @@
   #langtid {
     margin-left: 95px;
   }
+  .keyboard{
+    height: 165px;
+  }
+  .mobile-btn{
+    width: 100px;
+    height: 38px;
+  }
 }
 
 /*iPhone X*/
@@ -122,5 +150,8 @@
   }
   #langtid {
     margin-left: 80px;
+  }
+  .keyboard{
+    height: 180px;
   }
 }

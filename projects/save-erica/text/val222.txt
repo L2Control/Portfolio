@@ -16,6 +16,7 @@
 <p class="erica chatAni">JAG ÄR RÄDD</p>
 <p class="erica chatAni">TÄNK SÅ FÅR JAG ÅKA IN<br>I FÄNGELSET</p>
 <p class="me chatAni">Ring polisen så de kan komma och plocka upp honom</p>
+<p class="chat-time chatAni center-later-me">10 minuter senare</p>
 <p class="erica chatAni">Polisen är här och hämtar honom</p>
-<p class="me chatAni">Vilken lättnad</p>
+<p class="me chatAni">Vilken tur</p>
 <p class="erica chatAni" id=end>Det var nära ögat...</p>
