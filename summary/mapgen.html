@@ -8,11 +8,13 @@
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="pictures/logo-mini.ico"
+      href="../pictures/logo-mini.ico"
     />
-    <link rel="stylesheet" href="style.css" type="text/css" />
-    <link rel="stylesheet" href="style-project.css" type="text/css" />
-    <link rel="stylesheet" href="style-grid.css" type="text/css" />
+    <link rel="stylesheet" href="../style.css" type="text/css" />
+
+    <link rel="stylesheet" href="../style-project.css" type="text/css" />
+    <link rel="stylesheet" href="../style-summary.css" type="text/css" />
+    <link rel="stylesheet" href="../style-grid.css" type="text/css" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato" />
     <link
       rel="stylesheet"
@@ -22,24 +24,42 @@
   <body>
     <header class="sticky">
       <nav class="navmeny" id="navmeny">
-        <a href="index.html"
-          ><img class="nav-logo" src="pictures/logo.png" alt="Hannes Levéque"
+        <a href="../index.html"
+          ><img
+            class="nav-logo"
+            src="../pictures/logo.png"
+            alt="Hannes Levéque"
         /></a>
         <div class="empty"></div>
-        <a class="a-nav" href="index.html" tabindex="2">Home</a>
+        <a class="a-nav" href="../index.html" tabindex="2">Home</a>
 
-        <a class="a-nav" href="index.html" tabindex="3">About</a>
+        <a class="a-nav" href="../index.html" tabindex="3">About</a>
 
-        <a class="a-nav" href="index.html" tabindex="4">Projects</a>
+        <a class="a-nav" href="../index.html" tabindex="4">Projects</a>
 
-        <a class="a-nav" href="index.html" tabindex="5">Contact</a>
+        <a class="a-nav" href="../index.html" tabindex="5">Contact</a>
 
         <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
           <i class="fa fa-bars"></i>
         </a>
       </nav>
     </header>
-    <main class="grid">
+    <main>
+      <article>
+        <h1 class="summary">Map <span class="p-white">Generator</span></h1>
+        <p class="summary">
+          This is a javascript project where we create a map that's given an
+          input of how many rooms + complexity (extra connections between
+          randomized rooms). It's created in HTML, CSS and JS <br />
+          Then it calculates all the different paths between your start room and
+          your desired destination
+          <br />
+          Do you want to test it?
+          <a href="../projects/map-gen/index.html" style="color: white"
+            >Click here</a
+          >
+        </p>
+      </article>
     </main>
     <footer>
       <div class="footer-flex">
@@ -48,7 +68,7 @@
         </a>
         <a href="mailto:pannes.pannes@gmail.com">
           <img
-            src="pictures/mail-logo.png"
+            src="../pictures/mail-logo.png"
             alt="Mail icon"
             class="footer-img footer-imgh"
           />
@@ -58,7 +78,7 @@
         <p class="p-footer">L2 Control#4892</p>
 
         <img
-          src="pictures/discord-logo.png"
+          src="../pictures/discord-logo.png"
           alt="Discord logo"
           class="footer-img"
         />
@@ -69,7 +89,7 @@
         </a>
         <a href="https://github.com/l2control" target="_blank">
           <img
-            src="pictures/Github-logo.png"
+            src="../pictures/Github-logo.png"
             alt="Github logo"
             class="footer-img footer-imgh"
           />
@@ -118,37 +138,7 @@
             );
           } // End if
         });
-        
-        // Funkar EJ på githubs livepage. Ingen aning varför
-        var folder = "project-img/";
-        var summary = "";
-        
-        $.ajax({
-          url: folder,
-          success: function (data) {
-            $(data)
-              .find("a")
-              .attr("href", function (i, val) {
-                if (val.match(/\.(jpe?g|png|gif)$/)) {
-                  summary = val.replace("project-img/", "summary/");
-                  summary = summary.replace("png", "html");
-                  summary = summary.replace("jpeg", "html");
-                  summary = summary.replace("jpg", "html");
-                  $("main").append(
-                    "<section class='grid-item'><a href='" +
-                      summary +
-                      "'><div class='grid-div'><img class='project-img' src='" +
-                      val +
-                      "' alt='Project'/></div></a></section>"
-                  );
-                }
-              });
-          },
-        });
-
       });
-
-      
     </script>
   </body>
 </html>

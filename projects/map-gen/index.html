@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Map Generator</title>
+        <meta name="description" content="">    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="flex">
+            <div>
+                <h4>Number of Rooms</h4>
+                <input type="number" name="rooms" id="rooms" class="input-field"></input> 
+            </div>
+            <div>
+                <h4>Complexity</h4>
+                <input type="number" name="complexity" id="complexity" class="input-field"></input>
+            </div>
+        </div>
+        <div class="flex">
+            <div>
+                <h4>Start Room</h4>
+                <input type="number" name="start" id="start" class="input-field"></input> 
+            </div>
+            <div>
+                <h4>Destination</h4>
+                <input type="number" name="destination" id="destination" class="input-field"></input>
+            </div>
+        </div>
+        <div class="flex2"><button class="btn" id="btn1">Create Map</button></div>
+        <div class="appendedRooms"></div>
+        <div class="pathinput"></div>
+        <div class="paths"></div>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script src="MapGen.js"></script>
+    </body>
+</html>
