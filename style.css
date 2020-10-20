@@ -288,6 +288,8 @@ section.courses {
 /*---- Footer ----*/
 footer {
   display: flex;
+  position: fixed;
+  bottom: 0;
   width: 100%;
   background-color: black;
   margin: 0;

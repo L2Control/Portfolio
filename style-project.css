@@ -4,7 +4,6 @@ body {
   overflow: auto;
 }
 main {
-  margin: 0 5vw;
   background-color: #695e78;
   min-height: 84.8vh;
 }
