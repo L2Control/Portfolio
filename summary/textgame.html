@@ -10,19 +10,24 @@
       type="image/x-icon"
       href="../pictures/logo-mini.ico"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="../style.css" type="text/css" />
-
-    <link rel="stylesheet" href="../style-project.css" type="text/css" />
-    <link rel="stylesheet" href="../style-summary.css" type="text/css" />
     <link rel="stylesheet" href="../style-grid.css" type="text/css" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato" />
+
+    <link rel="stylesheet" href="../style-summary.css" type="text/css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
   <body>
-    <header class="sticky">
+    <header>
       <nav class="navmeny" id="navmeny">
         <a href="../index.html"
           ><img
@@ -44,33 +49,57 @@
         </a>
       </nav>
     </header>
-    <main>
-      <article>
-        <h1 class="summary">Save <span class="p-white">Erica</span></h1>
-        <p class="summary">
-          This is a game about your bestfriend Erica. You have a completely
-          ordinary conversation until someone knocks on the door...<br />
-          Erica doesn't know how to react and asks for your advice. What will
-          you tell her to do? <br />
-          Every choice of yours will have an impact on how things will end for
-          Erica.
-        </p>
-        <p class="summary">
-          This game is an interactive game with over 50 different situations and
-          multiple endings, which means that anything could happen...<br />
-          The game is fully played out as a SMS-conversation between you and
-          your friend, Erica, with you being able to choose different
-          reponses.<br />
-          It's created in HTML, CSS, JS, AJAX and jQuery. <br />
-          <br />
-          Do you want to play it? <a href="../projects/save-erica/index.html" style="color: white;">Click</a> on the
-          image below
-        </p>
-        <a href="../projects/save-erica/index.html"
-          ><img class="summary-img" src="../pictures/textgame-cut.png" alt=""
-        /></a>
-      </article>
-    </main>
+    <div class="cointainer">
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+          <h1>Save <span class="p-white">Erica</span></h1>
+          <p>
+            This is a game about your bestfriend Erica. You have a completely
+            ordinary conversation until someone knocks on the door... Erica
+            doesn't know how to react and asks for your advice. What will you
+            tell her to do? Every choice of yours will have an impact on how
+            things will end for Erica.
+          </p>
+          <p>
+            This game is an interactive game with over 50 different situations
+            and multiple endings, which means that anything could happen...
+            <br />The game is fully played out as a SMS-conversation between you
+            and your friend, Erica, with you being able to choose different
+            reponses. This means: Erica's fate is in your hands.
+          </p>
+          <p>Save Erica is created in HTML, CSS, JS, AJAX and jQuery.</p>
+
+          <p>
+            Do you want to play it?
+            <a
+              class="click-here"
+              href="../projects/save-erica/index.html"
+              style="color: white"
+              >Click here</a
+            >
+            or on the image
+          </p>
+        </div>
+        <div class="col-md-5">
+          <a href="../projects/save-erica/index.html"
+            ><img class="summary-img" src="../pictures/textgame-cut.png" alt=""
+          /></a>
+        </div>
+      </div>
+      <div class="rowPag">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a class="page-link" href="#">Previous</a>
+            </li>
+            <li class="page-item">
+              <a class="page-link" href="mapgen.html">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
     <footer>
       <div class="footer-flex">
         <a href="mailto:pannes.pannes@gmail.com">
@@ -106,6 +135,18 @@
         </a>
       </div>
     </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Smooth Scrolling -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
