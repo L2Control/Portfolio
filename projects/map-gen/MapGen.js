@@ -1,8 +1,26 @@
 const _DEBUG = true;
 let _MAXRM = 0;
 let _COMPLEXITY = 0;
+let counter = 0;
 
-document.getElementById("btn1").addEventListener("click", mapGen);
+document.getElementById("btn1").addEventListener("click", checkMap);
+
+function checkMap() {
+  if (counter == 0) {
+    mapGen();
+    counter++;
+  } else {
+    let appendedRoomsInp = document.querySelector(".appendedRooms");
+    let pathsInfo = document.querySelector(".paths");
+    while (appendedRoomsInp.hasChildNodes()) {
+      appendedRoomsInp.removeChild(appendedRoomsInp.firstChild);
+    }
+    while (pathsInfo.hasChildNodes()) {
+      pathsInfo.removeChild(pathsInfo.firstChild);
+    }
+    mapGen();
+  }
+}
 
 function pathFind(map) {
   _STARTRM = parseInt(document.getElementById("start").value);

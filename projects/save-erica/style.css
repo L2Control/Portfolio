@@ -1,5 +1,5 @@
 body {
-  background-color: #695e78;
+  background-color: #2e2f29;
   overflow: hidden;
   font-family: Helvetica, sans-serif;
 }
@@ -195,7 +195,7 @@ p {
 }
 
 /*Pick options*/
-.mobile-btn{
+.mobile-btn {
   font-family: "Lato", sans-serif;
   height: 40px;
   margin-top: 25px;

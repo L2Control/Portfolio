@@ -1,32 +1,57 @@
 body {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #ff7129;
   font-family: "Lato", sans-serif;
   line-height: normal;
-  overflow: hidden;
+}
+p {
+  color: #2e2f29;
+}
+footer p {
+  color: white;
+}
+a:hover {
+  text-decoration: none;
+}
+header {
+  background-color: white;
+}
+h4 {
+  font-weight: 700;
 }
 .cointainer {
   margin-top: 20px;
+  overflow-x: hidden;
+  margin-bottom: 125px;
 }
 .btn {
   font-weight: bold;
   font-size: 20px;
   background: white;
+  transition: ease-in-out 0.3s all;
 }
 .btn-outline-secondary:hover {
-  background-color: #695e78;
+  background-color: #2e2f29;
 }
 .forms {
   margin: 0;
   width: 50%;
   float: left;
   margin-bottom: 20px;
-  color: white;
+  color: #2e2f29;
 }
 input {
   text-align: center;
 }
 .form-control:focus {
-  border-color: #695e78;
-  box-shadow: 0 0 0 0.2rem rgba(105, 94, 120, 0.2);
+  border-color: #2e2f29;
+  box-shadow: 0 0 0 0.2rem rgba(46, 47, 41, 0.2);
+}
+.map-inputs {
+  margin-top: 50px;
+}
+i.fa-discord,
+i.fa-github,
+i.fa-envelope {
+  width: 50px;
 }
