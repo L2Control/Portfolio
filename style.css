@@ -1,6 +1,3 @@
-* {
-  margin: 0;
-}
 body {
   font-family: "Lato", sans-serif;
   margin: 0;
@@ -31,6 +28,7 @@ h1 {
 
 p {
   font-size: 18px;
+  line-height: 1.5;
 }
 .a-white {
   color: white;
@@ -45,8 +43,8 @@ nav {
 }
 
 .nav-logo {
-  transform: scale(0.6);
-  margin-left: -60px;
+  margin: 0;
+  height: 48px;
 }
 div.empty {
   width: 50vw;
@@ -171,9 +169,10 @@ progress::-webkit-progress-value {
     opacity: 0.6;
   }
   .navmeny.responsive .a-nav:hover {
-    background-color: black;
+    background-color: #2e2f29;
     opacity: 1;
     font-size: 20px;
+    color: white;
   }
   div.empty {
     display: none;
@@ -199,9 +198,6 @@ progress::-webkit-progress-value {
 @media screen and (max-width: 790px) {
   .home-logo {
     margin-top: 0;
-  }
-  .nav-logo {
-    margin-top: -20px;
   }
 }
 /*---------------------------------*/
@@ -397,7 +393,9 @@ footer {
   padding: 7px;
   margin-right: 5px;
   border: 2px solid #ff7129;
+  transition: ease-in-out 0.3s all;
 }
+
 .fa-envelope:hover,
 .fa-github:hover {
   background-color: #fff;
