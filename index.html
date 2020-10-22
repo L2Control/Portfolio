@@ -10,23 +10,27 @@
       type="image/x-icon"
       href="pictures/logo-mini.ico"
     />
-    <link rel="stylesheet" href="style.css" type="text/css" />
-    <link rel="stylesheet" href="style-grid.css" type="text/css" />
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="style-grid.css" type="text/css" />
   </head>
 
   <body>
     <header class="sticky">
       <nav class="navmeny" id="navmeny">
-        <a href="#home"
+        <a href="#home" class="a-logo"
           ><img class="nav-logo" src="pictures/logo.png" alt="Hannes Levéque"
         /></a>
         <div class="empty"></div>
-        <a class="a-nav" href="#home" tabindex="2">Home</a>
+        <a class="a-nav" href="#home" tabindex="2"><span>Home</span></a>
 
         <a class="a-nav" href="#about" tabindex="3">About</a>
 
@@ -38,6 +42,7 @@
           <i class="fa fa-bars"></i>
         </a>
       </nav>
+      <progress class="header-progress" max="100" value="1"></progress>
     </header>
     <aside class="aside-logo" id="home">
       <img
@@ -91,8 +96,8 @@
       <div class="grid">
         <div class="grid-item" id="grid-div">
           <a href="summary/textgame.html">
-            <div class="">
-              <div class=""></div>
+            <div class="grid-div">
+              <div></div>
               <img
                 class="project-img"
                 id="project-img"
@@ -105,7 +110,7 @@
         <div class="grid-item" id="grid-div2">
           <a href="summary/mapgen.html">
             <div class="grid-div">
-              <div class=""></div>
+              <div></div>
               <img class="project-img" src="project-img/z.jpg" alt="" />
             </div>
           </a>
@@ -130,40 +135,28 @@
     <footer>
       <div class="footer-flex">
         <a href="mailto:pannes.pannes@gmail.com">
-          <p class="p-footer a-white">pannes.pannes@gmail.com</p>
+          <i class="fas fa-envelope fa-2x"></i>
         </a>
         <a href="mailto:pannes.pannes@gmail.com">
-          <img
-            src="pictures/mail-logo.png"
-            alt="Mail icon"
-            class="footer-img footer-imgh"
-          />
+          <p class="p-footer a-footer">pannes.pannes@gmail.com</p>
         </a>
       </div>
       <div class="footer-flex">
+        <i class="fab fa-discord fa-2x"></i>
         <p class="p-footer">L2 Control#4892</p>
-
-        <img
-          src="pictures/discord-logo.png"
-          alt="Discord logo"
-          class="footer-img"
-        />
       </div>
       <div class="footer-flex">
         <a href="https://github.com/l2control" target="_blank">
-          <p class="p-footer a-white">L2 Control</p>
+          <i class="fab fa-github fa-2x"></i>
         </a>
         <a href="https://github.com/l2control" target="_blank">
-          <img
-            src="pictures/Github-logo.png"
-            alt="Github logo"
-            class="footer-img footer-imgh"
-          />
+          <p class="p-footer a-footer">L2 Control</p>
         </a>
       </div>
     </footer>
     <!-- Smooth Scrolling -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
     <script>
       //Get height of pic
       function height_script() {
@@ -182,9 +175,6 @@
           x.className += " responsive";
         } else {
           x.className = "navmeny";
-        }
-        var y = document.getElementById("a-nav");
-        if (x.className === "a-nav") {
         }
       }
 
